@@ -4,13 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="clin.css" type="text/css">
+  <link rel="stylesheet" href="./css/clin.css" type="text/css">
   <title>Module Calcul de ration</title>
   <meta name="description" content="Module pour Calcul de Ration">
-<script src="https://pingendo.com/assets/scripts/navbar-cover.js"></script>
-<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <script src="https://pingendo.com/assets/scripts/smooth-scroll.js"></script>
+  <script src="https://pingendo.com/assets/scripts/slidein-images.js"></script>
 
 <script type='text/javascript'>
 
@@ -103,8 +105,8 @@ function calculs_energetiques_chien(poids) {
   var de_alim = densite_energetique_chien(pr,mg,cel,cen,hum);  
   var quantite = Math.round(be/de_alim); 
   
-  document.getElementById('de_resultat').innerText = 'La densité énergétique calculée est de '+ Math.round(de_alim*100) + ' kCal/100g';
-  document.getElementById('be_resultat').innerText = 'Les besoins énergétiques sont de '+ Math.round(be) + ' kCal/jour';
+  document.getElementById('de_resultat').innerText = 'La densitÃ© Ã©nergÃ©tique calculÃ©e est de '+ Math.round(de_alim*100) + ' kCal/100g';
+  document.getElementById('be_resultat').innerText = 'Les besoins Ã©nergÃ©tiques sont de '+ Math.round(be) + ' kCal/jour';
   document.getElementById('quantite_resultat').innerText = 'Il faut environ '+ Math.round(quantite) + ' g/jour de cet aliment';
   
 }
@@ -156,8 +158,8 @@ function calculs_energetiques_chat(poids) {
   var de_alim = densite_energetique_chat(pr,mg,cel,cen,hum);  
   var quantite = Math.round(be/de_alim); 
   
-  document.getElementById('de_resultat').innerText = 'La densité énergétique calculée est de '+ Math.round(de_alim*100) + ' kCal/100g';
-  document.getElementById('be_resultat').innerText = 'Les besoins énergétiques sont de '+ Math.round(be) + ' kCal/jour';
+  document.getElementById('de_resultat').innerText = 'La densitÃ© Ã©nergÃ©tique calculÃ©e est de '+ Math.round(de_alim*100) + ' kCal/100g';
+  document.getElementById('be_resultat').innerText = 'Les besoins Ã©nergÃ©tiques sont de '+ Math.round(be) + ' kCal/jour';
   document.getElementById('quantite_resultat').innerText = 'Il faut environ '+ Math.round(quantite) + ' g/jour de cet aliment';
   
 }
@@ -183,13 +185,13 @@ function calculs_energetiques_chat(poids) {
       <div class="modal-body">
       <h3>Bienvenue !</h3>
       <p class="lead">
-      <h7>Ce module est destiné au calcul de la ration (en g/jour), en tenant compte du poids de l'animal, et des valeurs analytiques de l'aliment.
+      <h7>Ce module est destinÃ© au calcul de la ration (en g/jour), en tenant compte du poids de l'animal, et des valeurs analytiques de l'aliment.
       </h7>
-      <h7>La méthode de calcul se base sur la NRC 2006
+      <h7>La mÃ©thode de calcul se base sur la NRC 2006
       </h7>
       </p>
       <br />
-     <h6><small><em>Tout d'abord, nous allons vous demander quelques informations concernant votre animal, puis nous vous demanderons les informations indiquées sur le sac d'aliment</small></em></h6>
+     <h6><small><em>Tout d'abord, nous allons vous demander quelques informations concernant votre animal, puis nous vous demanderons les informations indiquÃ©es sur le sac d'aliment</small></em></h6>
       <br />   
    
 <div class="modal-body" style="display:none" id="infos_chien">
@@ -222,7 +224,7 @@ function calculs_energetiques_chat(poids) {
 
 
 <!-- Pathologies -->
-  <h8><u> L'animal présente-t-il une pathologie ?</u></h8>
+  <h8><u> L'animal prÃ©sente-t-il une pathologie ?</u></h8>
 <br />
 <div class='wrapper text-center'>
 <div class="btn-group btn-group-vertical text-center" data-toggle="buttons">
@@ -231,7 +233,7 @@ function calculs_energetiques_chat(poids) {
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="pathos" id="patho2" autocomplete="off"> Surpoids / Obésité
+    <input type="radio" name="pathos" id="patho2" autocomplete="off"> Surpoids / ObÃ©sitÃ©
   </label>
   
   <label class="btn btn-primary">
@@ -239,11 +241,11 @@ function calculs_energetiques_chat(poids) {
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="pathos" id="patho4" autocomplete="off"> Hypothyroïdie / Cushing
+    <input type="radio" name="pathos" id="patho4" autocomplete="off"> HypothyroÃ¯die / Cushing
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="pathos" id="patho5" autocomplete="off"> Ostéosarcome
+    <input type="radio" name="pathos" id="patho5" autocomplete="off"> OstÃ©osarcome
   </label>
 </div>
 </div>
@@ -259,11 +261,11 @@ function calculs_energetiques_chat(poids) {
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio" id="physio2" autocomplete="off"> Stérilisé
+    <input type="radio" name="physio" id="physio2" autocomplete="off"> StÃ©rilisÃ©
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio" id="physio3" autocomplete="off"> Gestation (2ème mois)
+    <input type="radio" name="physio" id="physio3" autocomplete="off"> Gestation (2Ã¨me mois)
   </label>
   
   <label class="btn btn-primary">
@@ -271,7 +273,7 @@ function calculs_energetiques_chat(poids) {
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio" id="physio5" autocomplete="off"> Croissance (début)
+    <input type="radio" name="physio" id="physio5" autocomplete="off"> Croissance (dÃ©but)
   </label>
 
   <label class="btn btn-primary">
@@ -296,7 +298,7 @@ function calculs_energetiques_chat(poids) {
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="active" id="active2" autocomplete="off"> Sédentaire / Calme
+    <input type="radio" name="active" id="active2" autocomplete="off"> SÃ©dentaire / Calme
   </label>
   
   <label class="btn btn-primary">
@@ -334,7 +336,7 @@ function calculs_energetiques_chat(poids) {
 
 
 <!-- Pathologies -->
-  <h8><u> L'animal présente-t-il une pathologie ?</u></h8>
+  <h8><u> L'animal prÃ©sente-t-il une pathologie ?</u></h8>
 <br />
 <div class='wrapper text-center'>
 <div class="btn-group btn-group-vertical text-center" data-toggle="buttons">
@@ -343,11 +345,11 @@ function calculs_energetiques_chat(poids) {
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="pathos_chat" id="patho_chat2" autocomplete="off"> Surpoids / Obésité
+    <input type="radio" name="pathos_chat" id="patho_chat2" autocomplete="off"> Surpoids / ObÃ©sitÃ©
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="pathos_chat" id="patho_chat3" autocomplete="off"> Resistance à l'amaigrissement
+    <input type="radio" name="pathos_chat" id="patho_chat3" autocomplete="off"> Resistance Ã  l'amaigrissement
   </label>
   
   <label class="btn btn-primary">
@@ -368,11 +370,11 @@ function calculs_energetiques_chat(poids) {
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat2" autocomplete="off"> Adulte stérilisé
+    <input type="radio" name="physio_chat" id="physio_chat2" autocomplete="off"> Adulte stÃ©rilisÃ©
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat3" autocomplete="off"> Gestation (2ème mois)
+    <input type="radio" name="physio_chat" id="physio_chat3" autocomplete="off"> Gestation (2Ã¨me mois)
   </label>
   
   <label class="btn btn-primary">
@@ -384,31 +386,31 @@ function calculs_energetiques_chat(poids) {
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat6" autocomplete="off"> Chaton entier 10 à 20 semaines
+    <input type="radio" name="physio_chat" id="physio_chat6" autocomplete="off"> Chaton entier 10 Ã  20 semaines
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat7" autocomplete="off"> Chaton entier 20 à 30 semaines
+    <input type="radio" name="physio_chat" id="physio_chat7" autocomplete="off"> Chaton entier 20 Ã  30 semaines
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat8" autocomplete="off"> Chaton entier 30 à 40 semaines
+    <input type="radio" name="physio_chat" id="physio_chat8" autocomplete="off"> Chaton entier 30 Ã  40 semaines
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat9" autocomplete="off"> Chaton castré < 10 semaines
+    <input type="radio" name="physio_chat" id="physio_chat9" autocomplete="off"> Chaton castrÃ© < 10 semaines
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat10" autocomplete="off"> Chaton castré 10 à 20 semaines
+    <input type="radio" name="physio_chat" id="physio_chat10" autocomplete="off"> Chaton castrÃ© 10 Ã  20 semaines
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat11" autocomplete="off"> Chaton castré 20 à 30 semaines
+    <input type="radio" name="physio_chat" id="physio_chat11" autocomplete="off"> Chaton castrÃ© 20 Ã  30 semaines
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="physio_chat" id="physio_chat12" autocomplete="off"> Chaton castré 30 à 40 semaines
+    <input type="radio" name="physio_chat" id="physio_chat12" autocomplete="off"> Chaton castrÃ© 30 Ã  40 semaines
   </label>  
   
 </div>
@@ -421,15 +423,15 @@ function calculs_energetiques_chat(poids) {
 <div class='wrapper text-center'>
 <div class="btn-group btn-group-vertical text-center" data-toggle="buttons">
   <label class="btn btn-primary active">
-    <input type="radio" name="active_chat" id="active_chat1" autocomplete="off" checked> Sédentaire (intérieur)
+    <input type="radio" name="active_chat" id="active_chat1" autocomplete="off" checked> SÃ©dentaire (intÃ©rieur)
   </label>
 
   <label class="btn btn-primary">
-    <input type="radio" name="active_chat" id="active_chat2" autocomplete="off"> Extérieur + intérieur
+    <input type="radio" name="active_chat" id="active_chat2" autocomplete="off"> ExtÃ©rieur + intÃ©rieur
   </label>
   
   <label class="btn btn-primary">
-    <input type="radio" name="active_chat" id="active_chat3" autocomplete="off"> Actif (extérieur)
+    <input type="radio" name="active_chat" id="active_chat3" autocomplete="off"> Actif (extÃ©rieur)
   </label>
 
 </div>
@@ -442,16 +444,16 @@ function calculs_energetiques_chat(poids) {
 
 
 
-      <h8><u>Veuillez entrer les valeurs indiquées par le fabricant:</u></h8>
+      <h8><u>Veuillez entrer les valeurs indiquÃ©es par le fabricant:</u></h8>
       
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Protéines" id="proteines" aria-describedby="basic-addon2">
-        <span class="input-group-addon" id="basic-addon2">% Protéines</span>
+        <input type="text" class="form-control" placeholder="ProtÃ©ines" id="proteines" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">% ProtÃ©ines</span>
       </div>
 
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Matières grasses" id="matieresgrasses" aria-describedby="basic-addon2">
-        <span class="input-group-addon" id="basic-addon2">% Matières grasses</span>
+        <input type="text" class="form-control" placeholder="MatiÃ¨res grasses" id="matieresgrasses" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">% MatiÃ¨res grasses</span>
       </div>      
       
        <div class="input-group">
@@ -465,15 +467,15 @@ function calculs_energetiques_chat(poids) {
       </div>      
       
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Humidité" id="humidite" aria-describedby="basic-addon2">
-        <span class="input-group-addon" id="basic-addon2">% Humidité</span>
+        <input type="text" class="form-control" placeholder="HumiditÃ©" id="humidite" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">% HumiditÃ©</span>
       </div>       
       <br/>
-      <h6><em><small>Si l'humidité n'est pas indiquée, entrer une valeur entre 8 et 10%</small></em></h6>
+      <h6><em><small>Si l'humiditÃ© n'est pas indiquÃ©e, entrer une valeur entre 8 et 10%</small></em></h6>
      
       
       <br />
-      <h8><u> Veuillez enfin entrer le poids de l'animal (désiré):</u></h8>
+      <h8><u> Veuillez enfin entrer le poids de l'animal (dÃ©sirÃ©):</u></h8>
       <br />
       
       <div class="input-group">
@@ -519,10 +521,10 @@ function calculs_energetiques_chat(poids) {
       </div>
       <div class="row">
         <div class="col-md-12">
-         <button type="button" class="btn btn-primary"  onclick="toggle_chat()" href="javascript:void(0);"><img src="http://jvet.fr/site/img/cat.png" class=img-fluid></button>
-         <button type="button" class="btn btn-primary"  onclick="toggle_chien()" href="javascript:void(0);"><img src="http://jvet.fr/site/img/dog.png" class=img-fluid></button>
+         <button type="button" class="btn btn-primary"  onclick="toggle_chat()" href="javascript:void(0);"><img width="200" src="./img/cat.png" class=img-fluid></button>
+         <button type="button" class="btn btn-primary"  onclick="toggle_chien()" href="javascript:void(0);"><img width="200" src="./img/dog.png" class=img-fluid></button>
        <p>
-       <h6 class="">(ces valeurs sont fournies à titre indicatif)</h6>
+       <h6 class="">(ces valeurs sont fournies Ã  titre indicatif)</h6>
        </p>
         </div>
       </div>
@@ -544,11 +546,7 @@ function calculs_energetiques_chat(poids) {
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-  <script src="https://pingendo.com/assets/scripts/smooth-scroll.js"></script>
-  <script src="https://pingendo.com/assets/scripts/slidein-images.js"></script>
+
 </body>
 
 </html>
